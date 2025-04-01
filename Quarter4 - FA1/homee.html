@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charityy</title>
+    <link rel="stylesheet" href="cscscs.css">
+</head>
+<body>
+
+    <header>
+        <h1>why YOU [yes you] should support our charityy</h1>
+    </header>
+
+    <p>
+        HELP US IN MAKING A DIFFERENCE, heres why:
+    </p>
+    <ul>
+        <li>We provide food, shelter, and education to those in need, ensuring they have the basic necessities for a better life. With your support, we raise awareness about important social issues, advocate for lasting change, and work to create a stronger, more compassionate community. Every contribution, whether big or small, helps transform lives, offering hope and opportunities to those who need them most.
+        </li>
+    </ul>
+
+    <form id="charityForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <fieldset>
+            <legend>Sex:</legend>
+            <input type="radio" id="male" name="sex" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="sex" value="female" required>
+            <label for="female">Female</label>
+
+            <input type="radio" id="preferNotSay" name="sex" value="prefer_not_say" required>
+            <label for="preferNotSay">Prefer not to say</label>
+        </fieldset>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact">
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script>
+        document.getElementById("charityForm").addEventListener("submit", function(event) {
+            let form = event.target;
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert("Please fill in all required fields.");
+            }
+        });
+    </script>
+
+</body>
+</html>
